@@ -12,6 +12,7 @@ import {
   Dice,
   Carousel,
   NumbersTable,
+  FaceBook,
 } from './components';
 
 function App() {
@@ -150,6 +151,10 @@ function App() {
       <div>
         <p>ITERATION 12</p>
         <NumbersTable limit={12} />
+      </div>
+      <div>
+        <p>ITERATION 13</p>
+        <FaceBook />
       </div>
     </div>
   );

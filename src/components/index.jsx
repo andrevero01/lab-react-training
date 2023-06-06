@@ -3,3 +3,4 @@ export * from './ClickablePicture';
 export * from './Dice';
 export * from './Carousel';
 export * from './NumbersTable';
+export * from './FaceBook';

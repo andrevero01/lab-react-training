@@ -1,21 +1,34 @@
 import { useState } from 'react';
 
 export const Carousel = ({ images }) => {
-  const [image1, setImage1] = useState(images[0]);
-  const [image2, setImage2] = useState(images[1]);
+  const currentLeftImg = images[0];
+  const currentRightImg = images[2];
+  const newLeftImg = images[1];
+  const newRightImg = images[3];
+
+  const [leftImage, setLeftImg] = useState(currentLeftImg);
+  const [rightImage, setRightImg] = useState(currentRightImg);
 
   const changeLeftImage = () => {
-    setImage1(images[2]);
+    if (leftImage === images[0]) {
+      setLeftImg(newLeftImg);
+    } else {
+      setLeftImg(images[0]);
+    }
   };
   const changeRightImage = () => {
-    setImage2(images[3]);
+    if (rightImage === images[2]) {
+      setRightImg(newRightImg);
+    } else {
+      setRightImg(images[2]);
+    }
   };
 
   return (
     <div>
       <div className="picturesContainer">
-        <img src={image1} alt=""></img>
-        <img src={image2} alt=""></img>
+        <img src={leftImage} alt=""></img>
+        <img src={rightImage} alt=""></img>
       </div>
       <button
         onClick={() => {

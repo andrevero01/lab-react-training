@@ -53,3 +53,18 @@ code {
   display: flex;
   flex-direction: column;
 }
+
+.numbers-table {
+  display: flex;
+}
+
+.facebook-card {
+  display: flex;
+  border: solid black;
+  width: 500px;
+  margin-bottom: 20px;
+}
+
+.facebook-info {
+  margin-left: 10px;
+}
