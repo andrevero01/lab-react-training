@@ -43,7 +43,8 @@ code {
   padding: 10px;
 }
 
-.credit-cards-container {
+.credit-cards-container,
+.picturesContainer {
   display: flex;
   gap: 30px;
 }

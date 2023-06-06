@@ -1,9 +1,17 @@
 function Rating({ children }) {
-  const stars = Math.ceil(children);
+  const roundedRating = Math.round(children);
+  const stars = [];
+  for (let i = 0; i < 5; i++) {
+    if (i < roundedRating) {
+      stars.push('★');
+    } else {
+      stars.push('☆');
+    }
+  }
+
   return (
     <div>
-      <span>&#9733;</span>
-      <span>&#9734;</span>
+      <span>{stars}</span>
     </div>
   );
 }
